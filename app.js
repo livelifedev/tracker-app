@@ -1,8 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
+const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
+
+mongoose.connect("mongodb://localhost/pigeondex", { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+
+mongoose.connection.on("error", err => console.log(err));
 
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
