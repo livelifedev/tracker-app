@@ -12,6 +12,7 @@ const PigeonSchema = new Schema({
     },
     behaviour: {
         type: String,
+        enum: ["docile", "quirky", "aggressive", "gentle"],
         required: true
     },
     location: {

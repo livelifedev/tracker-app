@@ -1,7 +1,33 @@
-<h1>Pigeon</h1>
+<h1>Pigeon Info</h1>
 
-<p>Name: {{ pigeon.name }}</p>
-<p>Description: {{ pigeon.description }}</p>
-<p>Behaviour: {{ pigeon.behaviour }}</p>
-<p>Location: {{ pigeon.location }}</p>
-<p>Activity Log: {{ pigeon.activity }}</p>
+<p>ID: {{pigeon.id}}</p>
+<p>Encounter: 0</p>
+<p>Name: {{pigeon.name}}</p>
+<p>Description: {{pigeon.description}}</p>
+<p>Behaviour: {{pigeon.behaviour}}</p>
+
+<p>Location: </p>
+<ul>
+    {{#each pigeon.location}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+<p>Activity Log: </p>
+<ul>
+    {{#each pigeon.activity}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+<form method="post" action="/pigeon/{{pigeon._id}}/comments">
+    <div>
+        <label>Log new activity</label>
+    </div>
+    <div>
+        <textarea name="activity"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Log" />
+    </div>
+</form>
