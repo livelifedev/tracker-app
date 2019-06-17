@@ -3,10 +3,12 @@
 <p>ID: {{pigeon.id}}</p>
 <p>Encounter: 0</p>
 <p>Name: {{pigeon.name}}</p>
+<p>Type: City Pigeon</p>
 <p>Description: {{pigeon.description}}</p>
 <p>Behaviour: {{pigeon.behaviour}}</p>
 
-<p>Location: </p>
+<p>Region: Sydney</p>
+<p>Last Sighted Location: </p>
 <ul>
     {{#each pigeon.location}}
         <li>{{this}}</li>
@@ -22,7 +24,7 @@
 
 <form method="post" action="/pigeon/{{pigeon._id}}/comments">
     <div>
-        <label>Log new activity</label>
+        <label>Log new activity: </label>
     </div>
     <div>
         <textarea name="activity"></textarea>

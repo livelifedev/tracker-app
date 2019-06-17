@@ -6,13 +6,23 @@ const PigeonSchema = new Schema({
         type: String,
         required: true
     },
+    type: {
+        type: String,
+        enum: ["City", "Day", "Night", "Wild"],
+        required: true
+    },
     description: {
         type: String,
         required: true
     },
     behaviour: {
         type: String,
-        enum: ["docile", "quirky", "aggressive", "gentle"],
+        enum: ["Docile", "Quirky", "Aggressive", "Gentle"],
+        required: true
+    },
+    region: {
+        type: String,
+        enum: ["NSW", "QLD", "SA", "TAS", "VIC", "WA", "NT", "ACT"],
         required: true
     },
     location: {
