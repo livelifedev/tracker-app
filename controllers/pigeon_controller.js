@@ -18,7 +18,10 @@ async function make(req, res) {
 }
 
 async function show(req, res) {
-
+  let { id } = req.params;
+  let pigeon = await PigeonModel.findById(id).populate("pigeon");
+  console.log(pigeon);
+  res.render("pigeon/show", { pigeon });
 }
 
 async function destroy(req, res) {
