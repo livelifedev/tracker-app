@@ -9,6 +9,18 @@ const PigeonSchema = new Schema({
     description: {
         type: String,
         required: true
+    },
+    behaviour: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: Array,
+        required: false
+    },
+    activity: {
+        type: Array,
+        required: false
     }
 });
 

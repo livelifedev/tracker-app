@@ -7,5 +7,6 @@ router.get("/", PagesController.home);
 router.get("/about", PagesController.about);
 
 router.get("/pigeons", PigeonController.index);
+router.get("/pigeons/new", PigeonController.make);
 
 module.exports = router;

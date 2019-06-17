@@ -9,7 +9,7 @@ async function create(req, res) {
 }
 
 async function make(req, res) {
-
+  return res.render("pigeon/new");
 }
 
 async function show(req, res) {
