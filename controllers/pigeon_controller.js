@@ -6,8 +6,8 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-  let {name, description, behaviour, location} = req.body;
-  let pigeon = await PigeonModel.create({ name, description, behaviour, location })
+  let {name, description, behaviour, location, activity} = req.body;
+  let pigeon = await PigeonModel.create({ name, description, behaviour, location, activity })
       .catch(err => res.status(500).send(err));
 
   return res.redirect("/pigeons");
