@@ -4,34 +4,34 @@ const Schema = mongoose.Schema;
 const PigeonSchema = new Schema({
     name: {
         type: String,
-        required: true
+        // required: true
     },
     type: {
         type: String,
-        enum: ["City", "Day", "Night", "Wild"],
-        required: true
+        // enum: ["City", "Day", "Night", "Wild"],
+        // required: true
     },
     description: {
         type: String,
-        required: true
+        // required: true
     },
     behaviour: {
         type: String,
-        enum: ["Docile", "Quirky", "Aggressive", "Gentle"],
-        required: true
+        // enum: ["Docile", "Quirky", "Aggressive", "Gentle"],
+        // required: true
     },
     region: {
         type: String,
-        enum: ["NSW", "QLD", "SA", "TAS", "VIC", "WA", "NT", "ACT"],
-        required: true
+        // enum: ["NSW", "QLD", "SA", "TAS", "VIC", "WA", "NT", "ACT"],
+        // required: true
     },
     location: {
         type: Array,
-        required: false
+        // required: false
     },
     activity: {
         type: Array,
-        required: false
+        // required: false
     }
 });
 

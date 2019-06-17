@@ -11,4 +11,6 @@ router.get("/pigeons/new", PigeonController.make);
 router.post("/pigeons", PigeonController.create);
 router.get("/pigeons/:id", PigeonController.show);
 
+router.post("/pigeons/:id/activity", PigeonController.activity);
+
 module.exports = router;

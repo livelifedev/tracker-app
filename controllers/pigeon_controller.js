@@ -36,6 +36,18 @@ async function edit(req, res) {
 
 }
 
+async function activity(req, res) {
+  let {id} = req.params;
+  let {activity} = req.body;
+  
+  let pigeon = await PigeonModel.findById(id);
+  pigeon.activity.push(activity);
+
+  await pigeon.save();
+
+  res.redirect(`/pigeons/${id}`);
+}
+
 module.exports = {
   index,
   create,
@@ -43,5 +55,6 @@ module.exports = {
   show,
   destroy,
   update,
-  edit
+  edit,
+  activity
 }
