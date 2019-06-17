@@ -1,8 +1,8 @@
-function home(req, res) {
+async function home(req, res) {
   return res.render("pages/home");
 }
 
-function about(req, res) {
+async function about(req, res) {
   return res.render("pages/about");
 }
 
