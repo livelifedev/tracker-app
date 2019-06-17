@@ -8,5 +8,6 @@ router.get("/about", PagesController.about);
 
 router.get("/pigeons", PigeonController.index);
 router.get("/pigeons/new", PigeonController.make);
+router.post("/pigeons", PigeonController.create);
 
 module.exports = router;

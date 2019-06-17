@@ -1,1 +1,16 @@
 <h1>Pigeons index</h1>
+
+<a href="/pigeons/new">Document new pigeon</a>
+
+{{#each pigeons}}
+    <div>
+        <p>Name: {{ this.name }}</p>
+        <p>Description: {{ this.description }}</p>
+        <p>Behaviour: {{ this.behaviour }}</p>
+        <p>Location: {{ this.location }}</p>
+        <p>Activity: {{ this.activity }}</p>
+    </div>
+    <a href="/pigeons/{{this._id}}">View Book</a>
+    <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Book</a>
+
+{{/each}}
