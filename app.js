@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 
+app.use(express.static("public"));
+
 mongoose.connect("mongodb://localhost/pigeondex", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 

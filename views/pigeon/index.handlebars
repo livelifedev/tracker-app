@@ -4,11 +4,13 @@
 
 {{#each pigeons}}
     <div>
+        <p>ID: {{ this.id }}</p>
+        <p>Encounter: 0</p>
         <p>Name: {{ this.name }}</p>
+        <p>Type: City Pigeon</p>
         <p>Description: {{ this.description }}</p>
         <p>Behaviour: {{ this.behaviour }}</p>
-        <p>Location: {{ this.location }}</p>
-        <p>Activity Log: {{ this.activity }}</p>
+        <p>Region: Sydney</p>
     </div>
     <a href="/pigeons/{{this._id}}">View Pigeon</a>
     <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Pigeon</a>
