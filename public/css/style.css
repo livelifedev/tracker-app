@@ -1,0 +1,110 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper .page {
+    width: 60%;
+    
+}
+
+.pigeonImg {
+    width: 250px;
+    height: 250px;
+    border: black 1px solid;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pigeonInfo {
+    border: 2px #99C5A4 solid;
+}
+
+.pigeonInfo > h3 {
+    background-color: #99C5A4;
+    padding: 5px 25px;
+    margin-top: 0;
+}
+
+.pigeonDetailsGrp {
+    display: flex;
+    justify-content: center;
+}
+
+.pigeonDetailsGrp > div:nth-child(1) {
+    font-weight: bolder;
+}
+
+.pigeonDetailsGrp > div:nth-child(1) p span {
+    margin-right: 20px;
+}
+
+.pigeonDetailsGrp > div:nth-child(2) {
+    margin: 40px 60px 0 50px;
+}
+
+.pigeonDetailsGrp > div:nth-child(2) p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.pigeonDetailsGrp > div:nth-child(2) p span {
+    /* display: block; */
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.activityLog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.activityLog div:first-child > p {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-bottom: 15px; 
+}
+
+.activityLog ul {
+    /* list-style: none; */
+    padding: 0;
+    width: 450px;
+    color: #99C5A4;
+    margin: 0 0 40px; 
+}
+
+.activityLog li {
+    padding: 10px 0 2px 2px;
+    border-bottom: solid 1px;
+}
+
+.activityLog li span {
+    color: black;
+}
+
+.activityLog form {
+    margin-bottom: 40px; 
+}
+
+.activityLog form label {
+}
+
+.activityLog form textarea {
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+}
+
+.activityLog form input[type="submit"] {
+    width: 100px;
+    border-color: #99C5A4;
+    border-radius: 2px;
+}
+

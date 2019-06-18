@@ -1,35 +1,52 @@
-<h1>Pigeon Info</h1>
+<div class="page">
+    <h1>Pigeon Info</h1>
 
-<p>ID: {{pigeon.id}}</p>
-<p>Encounter: 0</p>
-<p>Name: {{pigeon.name}}</p>
-<p>Type: City Pigeon</p>
-<p>Description: {{pigeon.description}}</p>
-<p>Behaviour: {{pigeon.behaviour}}</p>
+    <div class="pigeonInfo">
+        <h3>ID: {{pigeon.id}}</h3>
 
-<p>Region: Sydney</p>
-<p>Last Sighted Location: </p>
-<ul>
-    {{#each pigeon.location}}
-        <li>{{this}}</li>
-    {{/each}}
-</ul>
+        <div class="pigeonDetailsGrp">
+            <div>
+                <p><span>Encounters: 0</span><span>Global: 0</span></p>
+                <div class="pigeonImg"></div>
+            </div>
 
-<p>Activity Log: </p>
-<ul>
-    {{#each pigeon.activity}}
-        <li>{{this}}</li>
-    {{/each}}
-</ul>
+            <div>
+                <p>Name: <span>{{pigeon.name}}</span></p>
+                <p>Type: <span>City Pigeon</span></p>
+                <p>Description: <span>{{pigeon.description}}</span></p>
+                <p>Behaviour: <span>{{pigeon.behaviour}}</span></p>
+                <p>Region: <span>Sydney</span></p>
+                <p>Last Sighted Location: </p>
+                <ul>
+                    {{#each pigeon.location}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 
-<form method="post" action="/pigeons/{{pigeon._id}}/activity">
-    <div>
-        <label>Log new activity: </label>
+        <div class="activityLog">
+            <div>
+                <p>Activity Log: </p>
+                <ul>
+                    {{#each pigeon.activity}}
+                        <li><span>{{this}}</span></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <form method="post" action="/pigeons/{{pigeon._id}}/activity">
+                    <div>
+                        <label>Log new activity: </label>
+                    </div>
+                    <div>
+                        <textarea name="activity"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Log" />
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <textarea name="activity"></textarea>
-    </div>
-    <div>
-        <input type="submit" value="Log" />
-    </div>
-</form>
+</div>
