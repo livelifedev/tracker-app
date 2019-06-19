@@ -1,12 +1,17 @@
-async function home(req, res) {
-  return res.render("pages/home");
+function home(req, res) {
+  res.render("pages/home");
 }
 
-async function about(req, res) {
-  return res.render("pages/about");
+function about(req, res) {
+  res.render("pages/about");
+}
+
+function dashboard(req, res) {
+  res.send("Welcome to your dashboard!");
 }
 
 module.exports = {
   home,
-  about
+  about,
+  dashboard
 }
