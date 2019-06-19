@@ -1,18 +1,28 @@
-<h1>Pigeons index</h1>
+<div class="page">
+    <h1>Pigeons index</h1>
 
-<a href="/pigeons/new">Document new pigeon</a>
+    <a href="/pigeons/new">Document new pigeon</a>
 
-{{#each pigeons}}
-    <div>
-        <p>ID: {{ this.id }}</p>
-        <p>Encounter: 0</p>
-        <p>Name: {{ this.name }}</p>
-        <p>Type: City Pigeon</p>
-        <p>Description: {{ this.description }}</p>
-        <p>Behaviour: {{ this.behaviour }}</p>
-        <p>Region: Sydney</p>
+    {{#each pigeons}}
+    <div class="pigeonIndex">
+
+        <div class="pigeonIndexGrp">
+            <div>
+                <h3>ID: {{ this.id }}</h3>
+                <div class="infoSplit">
+                    <div>
+                        <p>Name: {{ this.name }}</p>
+                        <p>Type: City Pigeon</p>
+                        <p>Region: Sydney</p>
+                    </div>
+                    <div>
+                        <p>Description: {{ this.description }}</p>
+                    </div>
+                </div>
+                <a href="/pigeons/{{this._id}}">View Pigeon</a>
+                <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Pigeon</a>
+            </div>
+        </div>
     </div>
-    <a href="/pigeons/{{this._id}}">View Pigeon</a>
-    <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Pigeon</a>
-
-{{/each}}
+    {{/each}}
+</div>
