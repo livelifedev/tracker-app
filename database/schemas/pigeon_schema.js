@@ -32,6 +32,10 @@ const PigeonSchema = new Schema({
     activity: {
         type: Array,
         // required: false
+    },
+    count: {
+        type: Number,
+        // required: true
     }
 });
 

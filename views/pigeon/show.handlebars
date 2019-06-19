@@ -6,7 +6,7 @@
 
         <div class="pigeonDetailsGrp">
             <div>
-                <p><span>Encounters: 0</span><span>Global: 0</span></p>
+                <p><span>Encounters: 0</span><span>Global: {{pigeon.count}}</span></p>
                 <div class="pigeonImg"></div>
             </div>
 
@@ -15,7 +15,7 @@
                 <p>Type: <span>City Pigeon</span></p>
                 <p>Description: <span>{{pigeon.description}}</span></p>
                 <p>Behaviour: <span>{{pigeon.behaviour}}</span></p>
-                <p>Region: <span>Sydney</span></p>
+                <p>Region: <span>{{pigeon.region}}</span></p>
                 <p>Last Sighted Location: </p>
                 <ul>
                     {{#each pigeon.location}}

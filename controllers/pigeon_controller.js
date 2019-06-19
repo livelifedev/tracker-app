@@ -6,8 +6,8 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-  let {name, description, behaviour, location, activity} = req.body;
-  let pigeon = await PigeonModel.create({ name, description, behaviour, location, activity })
+  let {name, description, behaviour, location, activity, region, count} = req.body;
+  let pigeon = await PigeonModel.create({name, description, behaviour, location, activity, region, count})
       .catch(err => res.status(500).send(err));
 
   return res.redirect("/pigeons");
@@ -25,7 +25,6 @@ async function show(req, res) {
 }
 
 async function destroy(req, res) {
-  console.log("RUNNNNNNNN");
   let { id } = req.params;
   await PigeonModel.findByIdAndRemove(id);
   res.redirect("/pigeons");
