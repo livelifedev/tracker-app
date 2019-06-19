@@ -1,7 +1,9 @@
 <div class="page">
     <h1>Pigeons index</h1>
 
-    <a href="/pigeons/new">Document new pigeon</a>
+    <div class="center">
+        <a href="/pigeons/new">Document new pigeon</a>
+    </div>
 
     {{#each pigeons}}
     <div class="pigeonIndex">
@@ -11,16 +13,19 @@
                 <h3>ID: {{ this.id }}</h3>
                 <div class="infoSplit">
                     <div>
-                        <p>Name: {{ this.name }}</p>
-                        <p>Type: City Pigeon</p>
-                        <p>Region: Sydney</p>
+                        <p><span class="bold">Name:</span> {{ this.name }}</p>
+                        <p><span class="bold">Type:</span> City Pigeon</p>
+                        <p><span class="bold">Description:</span> {{ this.description }}</p>
                     </div>
                     <div>
-                        <p>Description: {{ this.description }}</p>
+                        <p><span class="bold">Encounter:</span> 0</p>
+                        <p><span class="bold">Region:</span> Sydney</p>
                     </div>
                 </div>
-                <a href="/pigeons/{{this._id}}">View Pigeon</a>
-                <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Pigeon</a>
+                <div class="infoLinks">
+                    <a href="/pigeons/{{this._id}}">View Pigeon</a> |
+                    <a href="/pigeons/{{this._id}}?_method=DELETE">Delete Pigeon</a>
+                </div>
             </div>
         </div>
     </div>
