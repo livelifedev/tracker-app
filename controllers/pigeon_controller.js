@@ -25,7 +25,10 @@ async function show(req, res) {
 }
 
 async function destroy(req, res) {
-
+  console.log("RUNNNNNNNN");
+  let { id } = req.params;
+  await PigeonModel.findByIdAndRemove(id);
+  res.redirect("/pigeons");
 }
 
 async function update(req, res) {
