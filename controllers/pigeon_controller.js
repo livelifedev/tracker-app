@@ -1,8 +1,9 @@
 const PigeonModel = require("./../database/models/pigeon_model");
 
 async function index(req, res) {
-  let pigeons = await PigeonModel.find();;
-  return res.render("pigeon/index", {pigeons});
+  const user = req.session.user;
+  let pigeons = await PigeonModel.find();
+  return res.render("pigeon/index", {pigeons, user});
 }
 
 async function create(req, res) {

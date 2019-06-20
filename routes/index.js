@@ -7,6 +7,7 @@ const PigeonController = require("./../controllers/pigeon_controller");
 router.get("/", PagesController.home);
 router.get("/about", PagesController.about);
 
+router.get("/logout", AuthenticationController.logout);
 router.get("/register", AuthenticationController.registerNew);
 router.post("/register", AuthenticationController.registerCreate);
 router.get("/dashboard", PagesController.dashboard);
