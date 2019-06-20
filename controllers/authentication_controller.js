@@ -11,6 +11,15 @@ async function registerCreate(req, res) {
     res.redirect("/dashboard");
 }
 
+function loginNew(req, res) {
+    res.render("authentication/login");
+}
+
+function loginCreate(req, res) {
+    //code to go here
+    res.json(req.body);
+}
+
 function logout(req, res) {
     req.session.destroy(() => {
         res.redirect("/");
@@ -20,5 +29,7 @@ function logout(req, res) {
 module.exports = {
     registerNew,
     registerCreate,
-    logout
+    logout,
+    loginNew,
+    loginCreate
 }
