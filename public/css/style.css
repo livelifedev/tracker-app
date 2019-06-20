@@ -138,3 +138,19 @@ h1 {
 .bold {
     font-weight: bold;
 }
+
+nav {
+    display: flex;
+    flex: 1;
+    background-color: #99C5A4;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navRank {
+
+}
+
+.navUser {
+    align-self: flex-end;
+}
