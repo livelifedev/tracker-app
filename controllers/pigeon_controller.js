@@ -2,7 +2,8 @@ const PigeonModel = require("./../database/models/pigeon_model");
 const UserModel = require("./../database/models/user_model");
 
 async function index(req, res) {
-  const user = req.session.user;
+  const userId = req.session.user._id;
+  let user = await UserModel.findById(userId);
   let pigeons = await PigeonModel.find();
   res.render("pigeon/index", {pigeons, user});
 }
@@ -23,12 +24,15 @@ async function create(req, res) {
 }
 
 async function make(req, res) {
-  const user = req.session.user;
+  const userId = req.session.user._id;
+  let user = await UserModel.findById(userId);
   res.render("pigeon/new", {user});
 }
 
 async function show(req, res) {
-  const user = req.session.user;
+  const userId = req.session.user._id;
+  let user = await UserModel.findById(userId);
+
   let { id } = req.params;
   let pigeon = await PigeonModel.findById(id);
   console.log("show page", pigeon);
@@ -62,9 +66,11 @@ async function edit(req, res) {
 // }
 
 async function logNew(req, res) {
-  const user = req.session.user;
+  const userId = req.session.user._id;
+  let user = await UserModel.findById(userId);
+
   let { id } = req.params;
-  let pigeon = await PigeonModel.findById(id).populate("pigeon");
+  let pigeon = await PigeonModel.findById(id);
   res.render("pigeon/log", {pigeon, user});
 }
 
