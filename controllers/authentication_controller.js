@@ -5,8 +5,8 @@ function registerNew(req, res) {
 }
 
 async function registerCreate(req, res) {
-    const { email, password } = req.body;
-    const user = await UserModel.create({ email, password });
+    const {username, email, password, rank} = req.body;
+    const user = await UserModel.create({username, email, password, rank});
     req.session.user = user;
     res.redirect("/dashboard");
 }

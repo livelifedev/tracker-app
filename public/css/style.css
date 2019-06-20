@@ -154,3 +154,55 @@ nav {
 .navUser {
     align-self: flex-end;
 }
+
+
+
+
+
+
+/* Dashboard */
+
+.profileImg {
+    width: 250px;
+    height: 250px;
+    border: black 1px solid;
+}
+
+.profileInfo {
+    border: 2px #99C5A4 solid;
+}
+
+.profileInfo > h3 {
+    background-color: #99C5A4;
+    padding: 5px 25px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.profileDetailsGrp {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.profileDetailsGrp > div:nth-child(1) {
+    font-weight: bolder;
+}
+
+.profileDetailsGrp > div:nth-child(1) p span {
+    margin-right: 20px;
+}
+
+.profileDetailsGrp > div:nth-child(2) {
+    margin: 12px 60px 0 50px;
+}
+
+.profileDetailsGrp > div:nth-child(2) p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.profileDetailsGrp > div:nth-child(2) p span {
+    /* display: block; */
+    font-weight: normal;
+    font-size: 1em;
+}

@@ -7,7 +7,7 @@ function about(req, res) {
 }
 
 function dashboard(req, res) {
-  res.send("Welcome to your dashboard!");
+  res.render("pages/dashboard");
 }
 
 module.exports = {
