@@ -19,10 +19,11 @@ async function make(req, res) {
 }
 
 async function show(req, res) {
+  const user = req.session.user;
   let { id } = req.params;
   let pigeon = await PigeonModel.findById(id).populate("pigeon");
-  console.log(pigeon);
-  res.render("pigeon/show", { pigeon });
+  console.log("show page", pigeon);
+  res.render("pigeon/show", {pigeon, user});
 }
 
 async function destroy(req, res) {
@@ -39,12 +40,32 @@ async function edit(req, res) {
 
 }
 
-async function activity(req, res) {
+// async function activity(req, res) {
+//   let {id} = req.params;
+//   let {activity} = req.body;
+  
+//   let pigeon = await PigeonModel.findById(id);
+//   pigeon.activity.push(activity);
+
+//   await pigeon.save();
+
+//   res.redirect(`/pigeons/${id}`);
+// }
+
+async function logNew(req, res) {
+  const user = req.session.user;
+  let { id } = req.params;
+  let pigeon = await PigeonModel.findById(id).populate("pigeon");
+  res.render("pigeon/log", {pigeon, user});
+}
+
+async function logAdd(req, res) {
   let {id} = req.params;
-  let {activity} = req.body;
+  let {activity, location} = req.body;
   
   let pigeon = await PigeonModel.findById(id);
-  pigeon.activity.push(activity);
+  pigeon.activity.unshift(activity);
+  pigeon.location.unshift(location);
 
   await pigeon.save();
 
@@ -59,5 +80,7 @@ module.exports = {
   destroy,
   update,
   edit,
-  activity
+  // activity,
+  logNew,
+  logAdd
 }

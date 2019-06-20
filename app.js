@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const expressSession = require("express-session");
 const MongoStore = require("connect-mongo")(expressSession);
@@ -32,8 +32,8 @@ app.use(expressSession({
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 require("./config/passport");
 app.use(passport.initialize());

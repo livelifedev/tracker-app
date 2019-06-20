@@ -21,6 +21,10 @@ router.post("/pigeons", PigeonController.create);
 router.get("/pigeons/:id", PigeonController.show);
 router.delete("/pigeons/:id", PigeonController.destroy);
 
-router.post("/pigeons/:id/activity", PigeonController.activity);
+// router.post("/pigeons/:id/activity", PigeonController.activity);
+
+router.get("/pigeons/:id/log", PigeonController.logNew);
+router.post("/pigeons/:id/log", PigeonController.logAdd);
+
 
 module.exports = router;

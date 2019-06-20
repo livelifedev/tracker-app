@@ -21,6 +21,7 @@ h1 {
 
 .pigeonInfo {
     border: 2px #99C5A4 solid;
+    margin-bottom: 40px;
 }
 
 .pigeonInfo > h3 {
@@ -89,25 +90,21 @@ h1 {
     color: black;
 }
 
-.activityLog form {
-    margin-bottom: 40px; 
+.logBtn {
+    border: 1px solid #99C5A4;
+    padding: 10px 20px;
+    margin-bottom: 40px;
 }
 
-.activityLog form label {
+.logBtn a {
+    text-decoration: none;
+}
+.logBtn a:visited {
+    color: inherit;
 }
 
-.activityLog form textarea {
-    width: 300px;
-    height: 100px;
-    margin-top: 5px;
-}
 
-.activityLog form input[type="submit"] {
-    width: 100px;
-    border-color: #99C5A4;
-    border-radius: 2px;
-}
-
+/* Pigeon Index */
 .pigeonIndex {
     border: 2px #99C5A4 solid;
     margin: 20px;
@@ -155,9 +152,41 @@ nav {
     align-self: flex-end;
 }
 
+.navLinks {
+    position: absolute;
+    left: 135px;
+}
 
 
+/* Pigeon Log Add */
+.updateLog {
+    text-align: center;
+}
 
+.activityLog form {
+    margin-bottom: 40px; 
+}
+
+.activityLog form label {
+}
+
+.activityLog form input[type="text"] {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.activityLog form textarea {
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+}
+
+.activityLog form input[type="submit"] {
+    width: 100px;
+    border-color: #99C5A4;
+    border-radius: 2px;
+}
 
 
 /* Dashboard */

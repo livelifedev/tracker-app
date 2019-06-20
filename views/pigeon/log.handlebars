@@ -1,0 +1,37 @@
+<div class="page">
+    <h1>Add to Pigeon Log</h1>
+
+    <div class="pigeonInfo">
+        <h3>ID: {{pigeon._id}}</h3>
+        <div class="updateLog">
+            <div>
+                <h2><span>{{pigeon.name}}</span></h2>
+            </div>
+            <div>
+                <p><span>Current Encounters: 0</span></p>
+            </div>
+        </div>
+
+        <div class="activityLog">
+                <form method="post" action="/pigeons/{{pigeon._id}}/log">
+                    <div>
+                        <label>Enter pigeon location: </label>
+                    </div>
+                    <div>
+                        <input type="text" name="location" />
+                    </div>
+
+                    <div>
+                        <label>Log pigeon activity: </label>
+                    </div>
+                    <div>
+                        <textarea name="activity"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Log" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
