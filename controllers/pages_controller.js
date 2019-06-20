@@ -1,3 +1,5 @@
+const UserModel = require("./../database/models/user_model");
+
 function home(req, res) {
   res.render("pages/home");
 }
@@ -7,7 +9,8 @@ function about(req, res) {
 }
 
 async function dashboard(req, res) {
-  const user = req.session.user;
+  const userId = req.session.user._id;
+  let user = await UserModel.findById(userId);
   console.log("testing dashboard",user);
   res.render("pages/dashboard", {user});
 }
