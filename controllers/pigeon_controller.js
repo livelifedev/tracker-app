@@ -80,6 +80,7 @@ async function logAdd(req, res) {
   let {activity, location} = req.body;
   
   let pigeon = await PigeonModel.findById(id);
+  pigeon.count++;
   pigeon.activity.unshift(activity);
   pigeon.location.unshift(location);
 
