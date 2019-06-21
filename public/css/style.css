@@ -22,6 +22,11 @@
     width: 300px;
 }
 
+.block2 {
+    /* display: block; */
+    width: 400px;
+}
+
 .pigeonImg {
     width: 250px;
     height: 250px;
@@ -117,6 +122,13 @@ h1 {
     color: inherit;
 }
 
+.locationLog li:first-child {
+    color: #6FB478;
+}
+
+.locationLog li:not(:first-child) {
+    font-size: 0.9em;
+}
 
 /* Pigeon Index */
 .pigeonIndex {
@@ -204,6 +216,13 @@ nav {
     border-radius: 2px;
 }
 
+.pigeonForm {
+    text-align: center;
+}
+
+.pigeonForm div:nth-child(2n+2)  {
+    padding-bottom: 10px;
+}
 
 /* Dashboard */
 
