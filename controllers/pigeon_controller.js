@@ -10,8 +10,8 @@ async function index(req, res) {
 
 async function create(req, res) {
   const userId = req.session.user._id;
-  let {name, description, behaviour, location, activity, region, count} = req.body;
-  let pigeon = await PigeonModel.create({name, description, behaviour, location, activity, region, count})
+  let {name, description, behaviour, location, activity, region, count, type} = req.body;
+  let pigeon = await PigeonModel.create({name, description, behaviour, location, activity, region, count, type})
       .catch(err => res.status(500).send(err));
 
   let user = await UserModel.findById(userId);
@@ -83,6 +83,9 @@ async function logAdd(req, res) {
   pigeon.count++;
   pigeon.activity.unshift(activity);
   pigeon.location.unshift(location);
+  if (pigeon.location.length > 3) {
+    pigeon.location.pop(location);
+  }
 
   await pigeon.save();
 

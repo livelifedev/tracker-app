@@ -17,6 +17,11 @@
     
 }
 
+.block {
+    /* display: block; */
+    width: 300px;
+}
+
 .pigeonImg {
     width: 250px;
     height: 250px;
