@@ -1,3 +1,5 @@
+/* TEMP STYLING FOR EARLY DEVELOPMENT */
+
 /* .navWrapper {
     width: 100%;
     margin: 0 auto;
@@ -30,7 +32,7 @@
 .pigeonImg {
     width: 250px;
     height: 250px;
-    border: black 1px solid;
+    border: #6FB478 1px solid;
 }
 
 h1 {
@@ -104,6 +106,12 @@ h1 {
     border-bottom: solid 1px;
 }
 
+.activityLog li:first-child span {
+    color: #6FB478;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
 .activityLog li span {
     color: black;
 }
@@ -123,6 +131,7 @@ h1 {
 }
 
 .locationLog li:first-child {
+    font-weight: bolder;
     color: #6FB478;
 }
 
@@ -182,7 +191,7 @@ nav {
 
 .navLinks {
     position: absolute;
-    left: 135px;
+    left: 140px;
 }
 
 
