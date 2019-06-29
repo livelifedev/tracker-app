@@ -1,0 +1,281 @@
+/* TEMP STYLING FOR EARLY DEVELOPMENT */
+
+/* .navWrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #99C5A4;
+} */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1264px;
+    margin: 0 auto;
+}
+
+.wrapper .page {
+    width: 60%;
+    
+}
+
+.block {
+    /* display: block; */
+    width: 300px;
+}
+
+.block2 {
+    /* display: block; */
+    width: 400px;
+}
+
+.pigeonImg {
+    width: 250px;
+    height: 250px;
+    border: #6FB478 1px solid;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pigeonInfo {
+    border: 2px #99C5A4 solid;
+    margin-bottom: 40px;
+}
+
+.pigeonInfo > h3 {
+    background-color: #99C5A4;
+    padding: 5px 25px;
+    margin-top: 0;
+}
+
+.pigeonDetailsGrp {
+    display: flex;
+    justify-content: center;
+}
+
+.pigeonDetailsGrp > div:nth-child(1) {
+    font-weight: bolder;
+}
+
+.pigeonDetailsGrp > div:nth-child(1) p span {
+    margin-right: 20px;
+}
+
+.pigeonDetailsGrp > div:nth-child(2) {
+    margin: 40px 60px 0 50px;
+}
+
+.pigeonDetailsGrp > div:nth-child(2) p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.pigeonDetailsGrp > div:nth-child(2) p span {
+    /* display: block; */
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.activityLog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.activityLog div:first-child > p {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-bottom: 15px; 
+}
+
+.activityLog ul {
+    /* list-style: none; */
+    padding: 0;
+    width: 450px;
+    color: #99C5A4;
+    margin: 0 0 40px; 
+}
+
+.activityLog li {
+    padding: 10px 0 2px 2px;
+    border-bottom: solid 1px;
+}
+
+.activityLog li:first-child span {
+    color: #6FB478;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.activityLog li span {
+    color: black;
+}
+
+.logBtn {
+    border: 1px solid #99C5A4;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+.logBtn a {
+    text-decoration: none;
+    color: black;
+}
+.logBtn a:visited {
+    color: inherit;
+}
+
+.locationLog li:first-child {
+    font-weight: bolder;
+    color: #6FB478;
+}
+
+.locationLog li:not(:first-child) {
+    font-size: 0.9em;
+}
+
+/* Pigeon Index */
+.pigeonIndex {
+    border: 2px #99C5A4 solid;
+    margin: 20px;
+}
+
+.pigeonIndexGrp h3 {
+    background-color: #99C5A4;
+    padding: 5px 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.infoSplit {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.infoLinks {
+    text-align: center;
+    padding: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    background-color: #99C5A4;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* max-width: 1264px; */
+    /* margin: 0 auto; */
+}
+
+.navRank {
+
+}
+
+.navUser {
+    align-self: flex-end;
+}
+
+.navLinks {
+    position: absolute;
+    left: 140px;
+}
+
+
+/* Pigeon Log Add */
+.updateLog {
+    text-align: center;
+}
+
+.activityLog form {
+    margin-bottom: 40px; 
+}
+
+.activityLog form label {
+}
+
+.activityLog form input[type="text"] {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.activityLog form textarea {
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+}
+
+.activityLog form input[type="submit"] {
+    width: 100px;
+    border-color: #99C5A4;
+    border-radius: 2px;
+}
+
+.pigeonForm {
+    text-align: center;
+}
+
+.pigeonForm div:nth-child(2n+2)  {
+    padding-bottom: 10px;
+}
+
+/* Dashboard */
+
+.profileImg {
+    width: 250px;
+    height: 250px;
+    border: black 1px solid;
+}
+
+.profileInfo {
+    border: 2px #99C5A4 solid;
+}
+
+.profileInfo > h3 {
+    background-color: #99C5A4;
+    padding: 5px 25px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.profileDetailsGrp {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.profileDetailsGrp > div:nth-child(1) {
+    font-weight: bolder;
+}
+
+.profileDetailsGrp > div:nth-child(1) p span {
+    margin-right: 20px;
+}
+
+.profileDetailsGrp > div:nth-child(2) {
+    margin: 12px 60px 0 50px;
+}
+
+.profileDetailsGrp > div:nth-child(2) p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.profileDetailsGrp > div:nth-child(2) p span {
+    /* display: block; */
+    font-weight: normal;
+    font-size: 1em;
+}
