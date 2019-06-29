@@ -3,6 +3,8 @@ const router = express.Router();
 const PagesController = require("./../controllers/pages_controller");
 const AuthenticationController = require("./../controllers/authentication_controller");
 const PigeonController = require("./../controllers/pigeon_controller");
+const { authRedirect, authorise } = require("./../middleware/authorisation_middleware");
+
 
 router.get("/", PagesController.home);
 router.get("/about", PagesController.about);
@@ -11,9 +13,9 @@ router.get("/login", AuthenticationController.loginNew);
 router.post("/login", AuthenticationController.loginCreate);
 router.get("/logout", AuthenticationController.logout);
 
-router.get("/register", AuthenticationController.registerNew);
+router.get("/register", authRedirect, AuthenticationController.registerNew);
 router.post("/register", AuthenticationController.registerCreate);
-router.get("/dashboard", PagesController.dashboard);
+router.get("/dashboard", authorise, PagesController.dashboard);
 
 router.get("/pigeons", PigeonController.index);
 router.get("/pigeons/new", PigeonController.make);
